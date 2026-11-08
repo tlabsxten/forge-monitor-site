@@ -1,0 +1,1 @@
+bd68b7819e7e60d89f951a1daa2e160cc3be5b314d3c34c17bf77a9d8fdb6352  ForgeMonitor-1.0.0-macOS.dmg
