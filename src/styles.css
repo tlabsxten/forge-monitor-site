@@ -463,6 +463,24 @@ input[type="range"]:focus-visible {
   font-family: var(--mono);
 }
 
+.core-hud::after {
+  content: "";
+  position: absolute;
+  bottom: -2%;
+  left: 50%;
+  z-index: 1;
+  width: 210px;
+  height: 108px;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(7, 9, 10, 0.98) 0%,
+    rgba(7, 9, 10, 0.9) 45%,
+    rgba(7, 9, 10, 0) 76%
+  );
+  transform: translateX(-50%);
+}
+
 .hud-label {
   position: absolute;
   display: inline-flex;
@@ -522,10 +540,13 @@ input[type="range"]:focus-visible {
   position: absolute;
   bottom: 4%;
   left: 50%;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1px;
+  min-width: 132px;
+  padding: 4px 12px 3px;
   transform: translateX(-50%);
   text-align: center;
 }
@@ -536,11 +557,12 @@ input[type="range"]:focus-visible {
   font-weight: 500;
   letter-spacing: -0.07em;
   line-height: 1;
+  text-shadow: 0 2px 18px #000, 0 0 5px #000;
 }
 
 .hud-score span {
   color: var(--muted-2);
-  font-size: 8px;
+  font-size: 9px;
   letter-spacing: 0.24em;
 }
 
@@ -548,8 +570,9 @@ input[type="range"]:focus-visible {
   position: absolute;
   bottom: 0;
   left: 50%;
+  z-index: 2;
   color: var(--muted-2);
-  font-size: 7px;
+  font-size: 8px;
   letter-spacing: 0.16em;
   transform: translateX(-50%);
   white-space: nowrap;
@@ -1500,7 +1523,7 @@ input[type="range"]::-moz-range-thumb {
   }
 
   .hud-caption {
-    font-size: 6px;
+    font-size: 7px;
     letter-spacing: 0.1em;
   }
 

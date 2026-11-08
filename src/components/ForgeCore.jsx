@@ -114,7 +114,7 @@ export default function ForgeCore({
 
     const scene = new THREE.Scene()
     const camera = new THREE.PerspectiveCamera(40, 1, 0.1, 100)
-    camera.position.set(0, 0.35, 8.4)
+    camera.position.set(0, 0.35, 9.15)
     camera.lookAt(0, 0, 0)
 
     renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, mobile ? 1.5 : 2))
